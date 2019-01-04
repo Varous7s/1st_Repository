@@ -1,0 +1,112 @@
+#1 Calculate Damage
+
+Problem Description
+
+Far far away from the earth, in another galaxy, two planets revolve around a black hole. Both the planets are home to advanced civilizations. One of the planets is inhabited by the Jazis and the other, by Kews.
+The Jazis, for no reason at all, wanted to destroy the Kews. So they built a weapon that could destroy the planet of the Kews.
+
+Now, the Kews, to counterbalance the Jazi Act, made a shield around their planet that could withstand a damage D.
+
+Now a new report from the Kew spies showed that the damage could be more than that the shield can handle and the end was fast approaching the Kews. They had to plan some other way to get around the situation. So Kews started a mission to find a way to disarm the Jazis. In that mission they found the program that would be used to operate the weapon.
+
+The program executes from left to right and has the instructions of the following types:
+
+M - Multiply the current power of the weapon by 3.
+
+K - Kill Code, which fires the weapon with the current power
+
+S - Shunt Code, which cools the weapon, reducing the current power by half if and only if the resultant power is greater than or equal to the minimum power.
+
+The initial power as well as the minimum power of the weapon is 1.
+
+For example, for the program, MKSMKM, the following events occur.
+
+1. Multiplies the current power by 3, making its resultant power 3
+
+2. Fires the weapon with its current power, doing a damage of 3 to the target
+
+3. Cools the weapon down, halving its power to 1.5
+
+4. Multiplies the weapon power to 4.5
+
+5. Fires the weapon, doing a damage of 4.5 to the target
+
+6. Multiplies the weapon power to 13.5
+
+After the program runs, the weapon would have had caused a damage of [ 3 + 4.5 ] = 7.5
+
+Now the Kew intelligence are trying to change the program to bring down the damage caused by the weapon so that their shield can defend their planet. They decided to change the program by swapping the adjacent letters and that too, in minimum number of swaps, so that the Jazis wouldn't notice the change. They cannot swap the program more than the number of instructions in the program, else the program would execute itself automatically.
+
+Help the Kews save their planet from the evil Jazis.
+
+Constraints
+1 ≤ T ≤ 100.
+
+1 ≤ D ≤ 109.
+
+2 ≤ length of P ≤ 30.
+
+Every character in L is either M or K.
+
+Input Format
+The first line is for test cases, T. T test cases follow. Each test case contains an integer D and a string L: the maximum total impact our shield can bear, and the program
+
+Output
+For each test case, output one line containing either the minimum number of swap needed to accomplish the goal, or IMPOSSIBLE if it is not possible.
+
+Test Case
+
+Explanation
+Example 1
+
+Input 4
+
+1 MKS
+
+3 MK
+
+1 KKM
+
+3 MKSMKM
+
+Output 1
+
+0
+
+IMPOSSIBLE
+
+2
+
+Explanation
+
+In Case 1, we can swap the two instructions to reduce the total damage to 1, which the shield can withstand.
+
+In Case 2, there is no need to swap as shield can withstand the power 3.
+
+In Case 3, the program will do more impact even if we do the swap. So it is impossible to save the planet.
+
+In Case 4, it is explained in the description section.
+
+Example 2
+
+Input 5
+
+33 MMKSKKKK
+
+13 MMKKSSKKKK
+
+13 MMKKSSSSSKKKK
+
+13 KKKKKKMKKSSKKKK
+
+16 KKKKKKMKKSSKKKK
+
+Output 0
+
+3
+
+2
+
+8
+
+1
