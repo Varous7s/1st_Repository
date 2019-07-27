@@ -19,6 +19,14 @@ public class Passcode {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	
 
+}
+
+class Main
+{
+public static void main(String args[])
+{
+}
 }
